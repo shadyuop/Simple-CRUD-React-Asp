@@ -10,9 +10,15 @@ export const ACTION_TYPES = {
 
 export const fetchall = () => dispatch =>
     {
-        //get api request
-        dispatch({
+        api.dCandidate().fetchall()
+        .then( response => {
+            dispatch({
             type: ACTION_TYPES.FETCH_ALL,
-            payload: []
+            payload: response.data
+            })
         })
+        .catch(err => console.log(err))
+
+
+        
     }

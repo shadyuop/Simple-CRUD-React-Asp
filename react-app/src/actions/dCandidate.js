@@ -6,7 +6,7 @@ export const ACTION_TYPES = {
     DELETE: 'DELETE',
     FETCH_ALL: 'FETCH_ALL'
 
-};
+}
 
 export const fetchall = () => dispatch =>
     {
